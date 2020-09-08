@@ -1,3 +1,5 @@
+import play.sbt.PlayImport
+
 name := """sbt-5825-play-seed"""
 organization := "com.example"
 
@@ -9,6 +11,8 @@ scalaVersion := "2.13.3"
 
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+
+PlayImport.PlayKeys.playInteractionMode := play.sbt.StaticPlayNonBlockingInteractionMode
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
